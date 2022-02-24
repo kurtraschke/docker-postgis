@@ -2,6 +2,11 @@ name: Docker PostGIS CI
 
 on:
   push:
+    paths-ignore:
+      - '.github/dependabot.yml'
+      - '.gitignore'
+      - 'LICENSE'
+      - 'README.md'
   pull_request:
   schedule:
     - cron: '15 5 * * 2'  # Weekly, 1 day after the upstream
