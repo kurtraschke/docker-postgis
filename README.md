@@ -8,4 +8,4 @@ one day after the [upstream has built new
 images](https://github.com/postgis/docker-postgis/blob/master/.github/workflows/main.yml#L7).
 
 No support is provided. If you do not understand the implications of using this image, do not use it
-and instead of the [official PostGIS image](https://hub.docker.com/r/postgis/postgis).
+and use the [official PostGIS image](https://hub.docker.com/r/postgis/postgis) instead.
