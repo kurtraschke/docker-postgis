@@ -58,6 +58,7 @@ jobs:
           org.opencontainers.image.base.name=docker.io/postgis/postgis:${{ env.VERSION }}
         tags: |
           type=raw,value=${{ env.VERSION }},enable=true,priority=200
+          type=raw,value=${{ matrix.postgres }},enable=true,priority=200
           type=raw,value=latest,enable=${{ matrix.latest }},priority=200
 
     - name: Login to GitHub Container Registry
