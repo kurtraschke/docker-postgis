@@ -11,6 +11,11 @@ on:
   schedule:
     - cron: '15 5 * * 2'  # Weekly, 1 day after the upstream
 
+# Cancel existing executions when new commits are pushed onto the same branch
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 defaults:
   run:
     shell: bash
