@@ -10,6 +10,7 @@ on:
   pull_request:
   schedule:
     - cron: '15 5 * * 2'  # Weekly, 1 day after the upstream
+  workflow_dispatch:
 
 # Cancel existing executions when new commits are pushed onto the same branch
 concurrency:
