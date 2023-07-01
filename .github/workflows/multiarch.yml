@@ -81,7 +81,7 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Multi-platform build (docker buildx)
-      if: ${{ !((github.ref == 'refs/heads/multiarch') && (github.event_name != 'pull_request') && !env.ACT) }}
+      if: ${{ (github.ref == 'refs/heads/multiarch') && (github.event_name != 'pull_request') && !env.ACT }}
       uses: docker/build-push-action@2eb1c1961a95fc15694676618e422e8ba1d63825
       with:
         platforms: linux/amd64,linux/arm64
