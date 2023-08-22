@@ -28,12 +28,12 @@ jobs:
     strategy:
       matrix:
         # exclude the latest version set for use with "include" below
-        postgres: [14]
-        postgis: ['3.3']
+        postgres: ['14', '16beta3']
+        postgis: ['3.4']
         latest: [false]
         include:
         - postgres: 15  # only use the single latest version with "latest: true"
-          postgis: '3.3'
+          postgis: '3.4'
           latest: true
 
     name: Build docker image for ${{ matrix.postgres }}-${{ matrix.postgis }}
